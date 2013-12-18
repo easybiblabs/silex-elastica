@@ -1,5 +1,5 @@
 {
-    "name": "easybib/elastica-silex-service-provider",
+    "name": "easybib/silex-elastica",
     "type": "library",
     "description": "A Silex Service Provider for Elastica",
     "keywords": ["silex", "elastica", "elasticsearch", "elastic", "search"],
