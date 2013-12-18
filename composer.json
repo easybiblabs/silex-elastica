@@ -1,0 +1,22 @@
+{
+    "name": "easybib/elastica-silex-service-provider",
+    "type": "library",
+    "description": "A Silex Service Provider for Elastica",
+    "keywords": ["silex", "elastica", "elasticsearch", "elastic", "search"],
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Nils Adermann",
+            "email": "naderman@naderman.de",
+            "homepage": "http://www.naderman.de"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "EasyBib\\Service\\Elastica": "src"
+        }
+    },
+    "require": {
+        "php": ">=5.3.2"
+    }
+}
