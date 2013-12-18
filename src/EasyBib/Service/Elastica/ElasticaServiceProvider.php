@@ -14,6 +14,7 @@
 
 namespace EasyBib\Service\Elastica;
 
+use Elastica\Client;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 
@@ -22,10 +23,42 @@ use Silex\ServiceProviderInterface;
  */
 class ElasticaServiceProvider implements ServiceProviderInterface
 {
-    public function register(Application $app)
+    /** @var string */
+    protected $prefix;
+
+    /**
+     * Creates the service provider with a prefix name
+     *
+     * @param string $prefix All pimple keys will be prefixed with this
+     */
+    public function __construct($prefix = 'elastica')
     {
+        if (empty($prefix)) {
+            throw new \InvalidArgumentException("The specified prefix is not valid");
+        }
+
+        $this->prefix = $prefix;
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function register(Application $app)
+    {
+        $prefix = $this->prefix;
+
+        if (!isset($app["$prefix.client_options"])) {
+            $app["$prefix.client_options"] = array();
+        }
+
+        $app["$prefix"] = $app->share(function () use ($app, $prefix) {
+            return new Client($app["$prefix.client_options"]);
+        });
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function boot(Application $app)
     {
     }
