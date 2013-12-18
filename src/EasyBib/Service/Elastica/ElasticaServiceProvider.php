@@ -25,4 +25,8 @@ class ElasticaServiceProvider implements ServiceProviderInterface
     public function register(Application $app)
     {
     }
+
+    public function boot(Application $app)
+    {
+    }
 }
