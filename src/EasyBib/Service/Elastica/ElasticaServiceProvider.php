@@ -9,7 +9,7 @@
  *
  * @author   Nils Adermann <naderman@naderman.de>
  * @license  BSD-2-Clause
- * @link     http://www.easybib.com
+ * @link     http://www.imagineeasy.com
  */
 
 namespace EasyBib\Service\Elastica;
