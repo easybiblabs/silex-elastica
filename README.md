@@ -11,7 +11,7 @@ Once you have a Silex application skeleton you can register the service provider
 and set Elastica options:
 
 ```php
-$app->register(new Easybib\Service\Elastica\ElasticaServiceProvider(), array(
+$app->register(new EasyBib\Service\Elastica\ElasticaServiceProvider(), array(
     'elastica.client_options' => array(
         'host' => 'localhost',
         'port' => 9200,
