@@ -35,4 +35,4 @@ The full set of options is available on the [Elastica documentation](http://elas
 
 ## License ##
 
-The code is available under the [2 Clause BSD](LICENSE) license.
+The code is available under the [Apache-2.0](LICENSE.txt) license.

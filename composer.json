@@ -3,7 +3,7 @@
     "type": "library",
     "description": "A Silex Service Provider for Elastica",
     "keywords": ["silex", "elastica", "elasticsearch", "elastic", "search"],
-    "license": "BSD-2-Clause",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Nils Adermann",
